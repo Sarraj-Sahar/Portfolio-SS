@@ -47,7 +47,7 @@ class _DesktopBodyState extends State<DesktopBody> {
           child: Column(
             children: [
               //NavBar
-              MyNavBar(size),
+              // MyNavBar(size),
               //
 
               const SizedBox(

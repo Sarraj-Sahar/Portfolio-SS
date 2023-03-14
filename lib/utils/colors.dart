@@ -8,9 +8,11 @@ const myGreyColor = Color(0XFF1e1e1e);
 // const myPurpleAccentColor = Color(0XFFbc6ffc);
 
 const myPurpleAccentColor = Color.fromARGB(255, 163, 135, 255);
+
 const myDeepPurpleColor = Color(0XFF7d5bed);
 const myWhite = Color(0XFFf8f8f8);
 const myGrey = Color(0XFFa7a7a7);
+const myAccentGrey = Color(0xffffA8B2D1);
 
 // const myPurpleAccentColor = Color.fromARGB(255, 204, 141, 255);
 

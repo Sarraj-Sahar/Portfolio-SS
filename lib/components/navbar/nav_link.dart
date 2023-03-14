@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:port_s/components/navbar/on_hover_text.dart';
+import 'package:port_s/components/widgets/on_hover_text.dart';
 import 'package:port_s/utils/colors.dart';
 import 'package:port_s/utils/styles.dart';
 
@@ -16,28 +16,25 @@ class MyNavLink extends StatelessWidget {
     return OnHoverText(builder: (isHovered) {
       final myColor = isHovered ? myPurpleAccentColor : white;
       final mySize = isHovered ? 14.5 : 14.0;
-      return GestureDetector(
-        onTap: () {},
-        child: Padding(
-          padding: const EdgeInsets.symmetric(
-            vertical: 14.0,
-          ),
-          child: RichText(
-            text: TextSpan(
-              text: '$number',
-              style: myTextStyle(16),
-              children: [
-                TextSpan(
-                  text: '$title',
-                  style: TextStyle(
-                    color: myColor,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: "RobotoMono",
-                    fontSize: mySize,
-                  ),
+      return Padding(
+        padding: const EdgeInsets.symmetric(
+          vertical: 8.0,
+        ),
+        child: RichText(
+          text: TextSpan(
+            text: '$number',
+            style: myTextStyle(15, myPurpleAccentColor),
+            children: [
+              TextSpan(
+                text: '$title',
+                style: TextStyle(
+                  color: myColor,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: "RobotoMono",
+                  fontSize: mySize,
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       );

@@ -45,7 +45,7 @@ class MyTextButton extends StatelessWidget {
         padding: EdgeInsets.all(padding),
         child: Text(
           "$text",
-          style: myTextStyle(fontSize),
+          style: myTextStyle(fontSize, myPurpleAccentColor),
         ),
       ),
     );
