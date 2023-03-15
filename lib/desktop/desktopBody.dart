@@ -6,6 +6,7 @@ import 'package:port_s/components/sections/2.About.dart';
 import 'package:port_s/components/sections/3.Work.dart';
 import 'package:port_s/components/widgets/myEmail.dart';
 import 'package:port_s/components/widgets/mySocials.dart';
+import 'package:port_s/components/widgets/myStars.dart';
 import '../components/navbar/my_navbar.dart';
 import '../utils/colors.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
@@ -77,129 +78,137 @@ class _DesktopBodyState extends State<DesktopBody> {
       child: Scaffold(
           backgroundColor: myGreyColor,
           extendBody: true,
-          body: SingleChildScrollView(
-            physics: const ScrollPhysics(),
-            primary: true,
-            scrollDirection: Axis.vertical,
-            child: Column(children: [
-              // MyNavBar(size, context),
-              ////////
-              Container(
-                width: size.width,
-                height: size.height * 0.14,
-                decoration: const BoxDecoration(
-                  color: Color(0XFF181818),
-                  border: Border(
-                    bottom: BorderSide(width: 0.1, color: Colors.white),
+          body: Stack(children: [
+            //add starts here
+            MyStars(size),
+            //
+            SingleChildScrollView(
+              physics: const ScrollPhysics(),
+              primary: true,
+              scrollDirection: Axis.vertical,
+              child: Column(children: [
+                // MyNavBar(size, context),
+                ////////
+                //CHANGEME: change this container of navbar to a SliverAppbar
+                //=> will give us the option to dismiss navabr/ show it again on scroll up...
+                //many other features like opacity of navbar ON scroll...
+                Container(
+                  width: size.width,
+                  height: size.height * 0.14,
+                  decoration: const BoxDecoration(
+                    color: Color(0XFF181818),
+                    border: Border(
+                      bottom: BorderSide(width: 0.1, color: Colors.white),
+                    ),
                   ),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 2.0),
-                  child: Row(
-                    // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      MyLogo(),
-                      SizedBox(
-                        width: size.width * 0.25,
-                      ),
-                      Expanded(
-                        child: DefaultTabController(
-                          length: 4,
-                          child: TabBar(
-                              padding: EdgeInsets.zero,
-                              indicatorPadding: EdgeInsets.zero,
-                              labelPadding: EdgeInsets.zero,
-                              indicatorColor: Colors.transparent,
-                              onTap: (index) async {
-                                _scrollToIndex(index);
-                              },
-                              tabs: [
-                                Tab(
-                                  child:
-                                      MyNavLink(number: "01. ", title: "About"),
-                                ),
-                                Tab(
-                                  child: MyNavLink(
-                                      number: "02. ", title: "Experience"),
-                                ),
-                                Tab(
-                                  child: MyNavLink(
-                                      number: "03. ", title: "Projects"),
-                                ),
-                                Tab(
-                                  child: MyNavLink(
-                                      number: "04. ", title: "Contact"),
-                                ),
-                              ]),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 2.0),
+                    child: Row(
+                      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        MyLogo(),
+                        SizedBox(
+                          width: size.width * 0.25,
                         ),
-                      ),
-                      // MyTextButton(
-                      //     text: "Resume",
-                      //     padding: 10,
-                      //     fontSize: 14.0,
-                      //     borderWidth: 1,
-                      //     myFunction: () {})
-                    ],
+                        Expanded(
+                          child: DefaultTabController(
+                            length: 4,
+                            child: TabBar(
+                                padding: EdgeInsets.zero,
+                                indicatorPadding: EdgeInsets.zero,
+                                labelPadding: EdgeInsets.zero,
+                                indicatorColor: Colors.transparent,
+                                onTap: (index) async {
+                                  _scrollToIndex(index);
+                                },
+                                tabs: [
+                                  Tab(
+                                    child: MyNavLink(
+                                        number: "01. ", title: "About"),
+                                  ),
+                                  Tab(
+                                    child: MyNavLink(
+                                        number: "02. ", title: "Experience"),
+                                  ),
+                                  Tab(
+                                    child: MyNavLink(
+                                        number: "03. ", title: "Projects"),
+                                  ),
+                                  Tab(
+                                    child: MyNavLink(
+                                        number: "04. ", title: "Contact"),
+                                  ),
+                                ]),
+                          ),
+                        ),
+                        // MyTextButton(
+                        //     text: "Resume",
+                        //     padding: 10,
+                        //     fontSize: 14.0,
+                        //     borderWidth: 1,
+                        //     myFunction: () {})
+                      ],
+                    ),
                   ),
                 ),
-              ),
-              //////////
-              Row(
-                children: [
-                  //my Socials
-                  MySocials(size),
 
-                  //Home
-                  Expanded(
-                    child: Container(
-                      height: size.height - 82,
-                      //we wrap our scrollable widget with scrollConfiguration
-                      //so we can "hide" our scrollbar
-                      child: ScrollConfiguration(
-                        behavior: ScrollConfiguration.of(context)
-                            .copyWith(scrollbars: false),
-                        child: CustomScrollView(
-                          controller: _autoScrollController!,
-                          slivers: <Widget>[
-                            SliverList(
-                              delegate: SliverChildListDelegate(
-                                [
-                                  HomeHero(size),
-                                  SizedBox(
-                                    height: size.height * 0.20,
-                                  ),
-                                  _wrapScrollTag(
-                                    index: 0,
-                                    child: About(size: size),
-                                  ),
-                                  SizedBox(
-                                    height: size.height * 0.20,
-                                  ),
+                Row(
+                  children: [
+                    //my Socials
+                    MySocials(size),
 
-                                  //Where I've Worked
-                                  _wrapScrollTag(
-                                    index: 1,
-                                    child: Work(),
-                                  ),
-                                  SizedBox(
-                                    height: size.height * 0.20,
-                                  ),
-                                ],
+                    //Home
+                    Expanded(
+                      child: Container(
+                        height: size.height - 82,
+                        //we wrap our scrollable widget with scrollConfiguration
+                        //so we can "hide" our scrollbar
+                        child: ScrollConfiguration(
+                          behavior: ScrollConfiguration.of(context)
+                              .copyWith(scrollbars: false),
+                          child: CustomScrollView(
+                            controller: _autoScrollController!,
+                            slivers: <Widget>[
+                              SliverList(
+                                delegate: SliverChildListDelegate(
+                                  [
+                                    HomeHero(size),
+                                    SizedBox(
+                                      height: size.height * 0.20,
+                                    ),
+                                    _wrapScrollTag(
+                                      index: 0,
+                                      child: About(size: size),
+                                    ),
+                                    SizedBox(
+                                      height: size.height * 0.20,
+                                    ),
+
+                                    //Where I've Worked
+                                    _wrapScrollTag(
+                                      index: 1,
+                                      child: Work(),
+                                    ),
+                                    SizedBox(
+                                      height: size.height * 0.20,
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
 
-                            ///
-                          ],
+                              ///
+                            ],
+                          ),
                         ),
                       ),
                     ),
-                  ),
 
-                  MyEmail(size),
-                ],
-              ),
-            ]),
-          )),
+                    MyEmail(size),
+                  ],
+                ),
+              ]),
+            ),
+          ])),
     );
   }
 }
