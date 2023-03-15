@@ -15,7 +15,7 @@ class MyStars extends StatelessWidget {
       child: Container(
         width: 2.0,
         height: 2.0,
-        decoration: BoxDecoration(color: myAccentGrey, shape: BoxShape.circle),
+        decoration: const BoxDecoration(color: myGrey, shape: BoxShape.circle),
       ),
     );
   }
