@@ -20,63 +20,20 @@ class MyNavLink extends StatelessWidget {
         padding: const EdgeInsets.symmetric(
           vertical: 8.0,
         ),
+        //why didn't I just use a row instead of RichText
         child: RichText(
           text: TextSpan(
-            text: '$number',
-            style: myTextStyle(15, myPurpleAccentColor),
+            text: number,
+            style: myTextStyle(14.0, myPurpleAccentColor),
             children: [
               TextSpan(
-                text: '$title',
-                style: TextStyle(
-                  color: myColor,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: "RobotoMono",
-                  fontSize: mySize,
-                ),
+                text: title,
+                style: myTextStyle(mySize, myColor),
               ),
             ],
           ),
         ),
       );
     });
-  }
-}
-
-////
-///
-class oldMyNavLink extends StatelessWidget {
-  String number;
-  String title;
-
-  oldMyNavLink({required this.number, required this.title});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(
-        top: 10,
-      ),
-      child: GestureDetector(
-        onTap: () {},
-        child: Row(
-          children: [
-            Text(
-              this.number,
-              style: const TextStyle(
-                color: myPurpleAccentColor,
-                fontFamily: "RobotoMono",
-              ),
-            ),
-            Text(
-              title,
-              style: const TextStyle(
-                color: white,
-                fontFamily: "RobotoMono",
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
   }
 }

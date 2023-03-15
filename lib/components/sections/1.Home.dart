@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:port_s/methods/launchSocials.dart';
 import 'package:port_s/utils/colors.dart';
 import 'package:port_s/utils/styles.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
 
 class HomeHero extends StatelessWidget {
   Size size;
@@ -27,6 +26,7 @@ class HomeHero extends StatelessWidget {
               fontSize: 16,
             ),
           ),
+          //EXTRA : add some cursor "animation" when image is hovered
           Image.asset("../../../assets/imgs/silky2.gif", height: 30, width: 30),
           // Image.asset("../../../assets/imgs/glass_heart.gif",
           //     height: 50, width: 50),
@@ -37,25 +37,15 @@ class HomeHero extends StatelessWidget {
       SizedBox(
         height: size.height * 0.03,
       ),
-      //STYLE: add typewriter animation
+      //EXTRA: add typewriter animation
       RichText(
-        text: const TextSpan(
+        text: TextSpan(
             text: "Sahar",
-            style: TextStyle(
-                color: myPurpleAccentColor,
-                fontFamily: "Calibre",
-                fontWeight: FontWeight.w700,
-                letterSpacing: 0.25,
-                fontSize: 68),
+            style: mySectionStyle(68, discordPurple),
             children: [
               TextSpan(
                 text: " here.",
-                style: TextStyle(
-                    color: myWhite,
-                    fontFamily: "Calibre",
-                    fontWeight: FontWeight.w700,
-                    letterSpacing: 0.25,
-                    fontSize: 68),
+                style: mySectionStyle(68, myWhite),
               )
             ]),
       ),
@@ -65,7 +55,7 @@ class HomeHero extends StatelessWidget {
       const Text(
         "I build mobile apps.",
         style: TextStyle(
-            color: Color(0xffffA8B2D1),
+            color: myAccentGrey,
             fontFamily: "Calibre",
             fontSize: 60,
             fontWeight: FontWeight.bold,
@@ -74,22 +64,16 @@ class HomeHero extends StatelessWidget {
       SizedBox(
         height: size.height * 0.04,
       ),
-      const Text(
+      Text(
         "I am a software engineer who likes building mobile apps.I particularly\nenjoy the creative process of designing them and coming up with \nvisually appealing and attractive interfaces for my apps.",
-        style: TextStyle(
-            color: Color(0xffffA8B2D1),
-            fontFamily: "Roboto-Mono",
-            fontWeight: FontWeight.normal,
-            fontSize: 16,
-            wordSpacing: 0.75,
-            height: 1.5),
+        style: myParagraphStyle(16.0),
       ),
       SizedBox(
         height: size.height * 0.08,
       ),
       TextButton(
         onPressed: () {
-          //change this, put cv on google drive and launchURL to that link
+          //TODO:  put cv on google drive and launchURL to that link
           method.launchEmail();
         },
         style: ButtonStyle(

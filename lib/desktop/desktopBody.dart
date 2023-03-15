@@ -4,6 +4,7 @@ import 'package:port_s/components/navbar/nav_link.dart';
 import 'package:port_s/components/sections/1.Home.dart';
 import 'package:port_s/components/sections/2.About.dart';
 import 'package:port_s/components/sections/3.Work.dart';
+import 'package:port_s/components/sections/4.Projects.dart';
 import 'package:port_s/components/widgets/myEmail.dart';
 import 'package:port_s/components/widgets/mySocials.dart';
 import 'package:port_s/components/widgets/myStars.dart';
@@ -184,10 +185,19 @@ class _DesktopBodyState extends State<DesktopBody> {
                                       height: size.height * 0.20,
                                     ),
 
-                                    //Where I've Worked
+                                    //Experience
                                     _wrapScrollTag(
                                       index: 1,
-                                      child: Work(),
+                                      child: Work(size: size),
+                                    ),
+                                    SizedBox(
+                                      height: size.height * 0.20,
+                                    ),
+
+                                    //Projects
+                                    _wrapScrollTag(
+                                      index: 2,
+                                      child: Projects(size: size),
                                     ),
                                     SizedBox(
                                       height: size.height * 0.20,

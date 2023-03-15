@@ -32,7 +32,7 @@ class MyStars extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Stack(
-        children: _generateStars(50),
+        children: _generateStars(20),
       ),
     );
   }
