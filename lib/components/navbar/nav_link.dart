@@ -4,7 +4,7 @@ import 'package:port_s/components/sections/widgets/on_hover_text.dart';
 import 'package:port_s/utils/colors.dart';
 import 'package:port_s/utils/styles.dart';
 
-//TODO : the barrel thhing so I could import everything under utils once
+//EXTRA: the barrel thhing so I could import everything under utils once
 
 class MyNavLink extends StatelessWidget {
   String number;

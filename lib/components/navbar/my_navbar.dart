@@ -13,7 +13,7 @@ class MyNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //TODO : make navbar blurry transparent
+    //EXTRA : make navbar blurry transparent
     return Container(
       width: size.width,
       height: size.height * 0.14,

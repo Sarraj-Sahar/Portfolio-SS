@@ -23,6 +23,7 @@ class About extends StatelessWidget {
             children: [
               Flexible(
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     RichText(
                       text: TextSpan(
@@ -61,18 +62,18 @@ class About extends StatelessWidget {
                             ),
                             TextSpan(
                               text:
-                                  " started when I joined my first university club and was introduced to Flutter. Ever since,I've been experimenting with different mobile app developement frameworks and my passion for the field has only grown stronger.\n\nThat's why I am always on the lookout for ",
+                                  " started when I joined my first university club and was introduced to Flutter. Ever since,I've been experimenting with different mobile app developement frameworks and my passion for the field has only grown stronger.",
                               style: myParagraphStyle(17),
                             ),
-                            TextSpan(
-                              text: "new opportunities ",
-                              style: myEmphasizedStyle(17),
-                            ),
-                            TextSpan(
-                              text:
-                                  "that will allow me to further develop my skills and collaborate with highly motivated individuals.",
-                              style: myParagraphStyle(17),
-                            ),
+                            // TextSpan(
+                            //   text: "new opportunities ",
+                            //   style: myEmphasizedStyle(17),
+                            // ),
+                            // TextSpan(
+                            //   text:
+                            //       "that will allow me to further develop my skills and collaborate with highly motivated individuals.",
+                            //   style: myParagraphStyle(17),
+                            // ),
                           ]),
 
                       // "I graduated last year with a Bachelor's degree\nin Computer Science Engineering. Currently, I am\npursuing my Master's degree in Software Engineering \nat the South Mediterranean University on a full \nexcellence scholarship. \n\nMy interest in mobile app \ndevelopment was sparked when I joined my first university \nclub and was introduced to Flutter. Since then, I have \nspent all of my summer internships building mobile apps,\nand my passion for the field has only grown stronger. I am \nalways on the lookout for opportunities that will allow me \nto further develop my skills and collaborate with highly \nmotivated individuals.",

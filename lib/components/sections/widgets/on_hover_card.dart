@@ -33,7 +33,6 @@ class _OnHoverCardState extends State<OnHoverCard> {
           child: widget.builder(isHovered)),
     );
   }
-  //TODO : add scaling effect to 1.1
 
   void onHovered(bool isHovered) {
     setState(() {

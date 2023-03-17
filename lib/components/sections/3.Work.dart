@@ -13,8 +13,8 @@ class Work extends StatelessWidget {
     return Column(
       children: [
         SectionTtitle("02. ", "Experience", size),
-
-        // Job Card => should turn this into seperate widget
+//TODO : NEED TO ADD ON SCROLL ANIMATION to show work experience
+        //CLEAN : Job Card => should turn this into seperate widget
         //the current problem is the list of JobDetails
         //needs to be passed as list of strings and parsed into JobDetail elements
         Padding(
