@@ -13,17 +13,24 @@ class SectionTtitle extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text(
-          number,
-          style: myTextStyle(25, myPurpleAccentColor),
-          // style: mySectionStyle(25, myPurpleAccentColor),
+        Flexible(
+          child: Text(
+            number,
+            style: myTextStyle(22, myPurpleAccentColor),
+
+            // style: myTextStyle(size.width * 0.025, myPurpleAccentColor),
+          ),
         ),
-        Text(
-          title,
-          style: mySectionStyle(30, myWhite),
+        Flexible(
+          child: Text(
+            title,
+            style: mySectionStyle(25, myWhite),
+
+            // style: mySectionStyle(size.width * 0.03, myWhite),
+          ),
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 16.0, top: 5.0),
+          padding: EdgeInsets.only(left: size.width * 0.025, top: 5.0),
           child: Container(
             width: size.width * 0.2,
             height: 1,

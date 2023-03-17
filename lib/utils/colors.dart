@@ -13,7 +13,7 @@ const myDeepPurpleColor = Color(0XFF7d5bed);
 const myWhite = Color(0XFFf8f8f8);
 const myGrey = Color(0XFFa7a7a7);
 const myAccentGrey = Color(0xffffA8B2D1);
-
+const myElevatedGrey = Color(0XFF242424);
 const discordPurple = Color(0XFFacb0ff);
 
 // const myPurpleAccentColor = Color.fromARGB(255, 204, 141, 255);

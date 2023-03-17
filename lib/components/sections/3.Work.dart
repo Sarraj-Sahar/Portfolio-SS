@@ -12,7 +12,7 @@ class Work extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SectionTtitle("0.2 ", "Experience", size),
+        SectionTtitle("02. ", "Experience", size),
 
         // Job Card => should turn this into seperate widget
         //the current problem is the list of JobDetails

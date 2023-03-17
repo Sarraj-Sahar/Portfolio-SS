@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:port_s/components/widgets/on_hover_text.dart';
+import 'package:port_s/components/sections/widgets/on_hover_text.dart';
 import 'package:port_s/utils/colors.dart';
 import 'package:port_s/utils/styles.dart';
 

@@ -8,24 +8,24 @@ class FractalApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Fractal Tree',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: const MyHomePage(),
-    );
+        title: 'Flutter Fractal Tree',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+        ),
+        home: const Scaffold(
+            backgroundColor: Colors.black, body: Center(child: MyFractal())));
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+class MyFractal extends StatefulWidget {
+  const MyFractal({super.key});
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage>
+class _MyHomePageState extends State<MyFractal>
     with SingleTickerProviderStateMixin {
   double _progress = 0.01;
   Animation<double>? animation;
@@ -55,27 +55,8 @@ class _MyHomePageState extends State<MyHomePage>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.black,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Flexible(
-              flex: 1,
-              child: AspectRatio(
-                aspectRatio: 1,
-                child: CustomPaint(
-                  painter: TreePainter(_progress),
-                ),
-              ),
-            ),
-            const SizedBox(
-              height: 24,
-            )
-          ],
-        ),
-      ),
+    return CustomPaint(
+      painter: TreePainter(_progress),
     );
   }
 

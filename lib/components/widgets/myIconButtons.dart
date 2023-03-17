@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:port_s/components/widgets/on_hover_text.dart';
+import 'package:port_s/components/sections/widgets/on_hover_text.dart';
 import 'package:port_s/methods/launchSocials.dart';
 import 'package:port_s/utils/colors.dart';
 

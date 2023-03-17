@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:port_s/components/sections/widgets/section_title.dart';
+import 'package:port_s/components/widgets/fractals.dart';
 import 'package:port_s/utils/colors.dart';
 import 'package:port_s/utils/strings.dart';
 import 'package:port_s/utils/styles.dart';
@@ -92,7 +93,7 @@ class About extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: EdgeInsets.only(left: size.width * 0.02),
+                          padding: EdgeInsets.only(left: size.width * 0.04),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -115,11 +116,19 @@ class About extends StatelessWidget {
                   ],
                 ),
               ),
-              Flexible(
-                  child: Placeholder(
-                fallbackHeight: 300,
-                fallbackWidth: 300,
-              ))
+
+              //Fractals to be replaced with lottie animation
+              // Container(
+              //   height: size.height * 0.4,
+              //   width: size.width * 0.4,
+              //   child: MyFractal(),
+              // )
+              // const Flexible(
+              //   child: Placeholder(
+              //     fallbackHeight: 300,
+              //     fallbackWidth: 300,
+              //   ),
+              // ),
               //EXTRA : plcae image or Fractals animation...
               // Image.asset(
               //   "../../../assets/imgs/liquid.gif",
@@ -138,10 +147,12 @@ Widget Technology(Size size, String name) {
   return Row(
     children: [
       Padding(
-        padding: const EdgeInsets.only(right: 8.0),
-        child: const Icon(
+        padding: EdgeInsets.only(
+          right: size.height * 0.01,
+        ),
+        child: Icon(
           FeatherIcons.play,
-          size: 8,
+          size: size.height * 0.015,
           color: myPurpleAccentColor,
         ),
       ),
@@ -151,7 +162,7 @@ Widget Technology(Size size, String name) {
           color: myWhite,
           fontWeight: FontWeight.w500,
           fontFamily: "RobotoMono",
-          fontSize: size.height * 0.025,
+          fontSize: size.height * 0.03,
         ),
       )
     ],
