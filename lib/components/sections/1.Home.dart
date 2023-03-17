@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:port_s/components/sections/widgets/on_hover_card.dart';
 import 'package:port_s/methods/launchSocials.dart';
 import 'package:port_s/utils/colors.dart';
 import 'package:port_s/utils/styles.dart';
@@ -71,37 +72,39 @@ class HomeHero extends StatelessWidget {
       SizedBox(
         height: size.height * 0.08,
       ),
-      TextButton(
-        onPressed: () {
-          //TODO:  put cv on google drive and launchURL to that link
-          method.launchEmail();
-        },
-        style: ButtonStyle(
-          // foregroundColor: MaterialStateProperty.resolveWith<Color>(
-          //     (Set<MaterialState> states) {
-          //   if (states.contains(MaterialState.hovered)) return Colors.yellow;
-          //   return Colors.blue;
-          // }),
-          side: MaterialStateProperty.all(
-              const BorderSide(width: 1, color: myPurpleAccentColor)),
-          backgroundColor: MaterialStateProperty.resolveWith<Color?>(
-            (states) {
-              if (states.contains(MaterialState.hovered) ||
-                  states.contains(MaterialState.pressed))
-                return myPurpleAccentColor.withOpacity(0.2);
+      OnHoverCard(0, -8, 1, builder: (isHovered) {
+        return TextButton(
+          onPressed: () {
+            //TODO:  put cv on google drive and launchURL to that link
+            method.launchEmail();
+          },
+          style: ButtonStyle(
+            // foregroundColor: MaterialStateProperty.resolveWith<Color>(
+            //     (Set<MaterialState> states) {
+            //   if (states.contains(MaterialState.hovered)) return Colors.yellow;
+            //   return Colors.blue;
+            // }),
+            side: MaterialStateProperty.all(
+                const BorderSide(width: 1, color: myPurpleAccentColor)),
+            backgroundColor: MaterialStateProperty.resolveWith<Color?>(
+              (states) {
+                if (states.contains(MaterialState.hovered) ||
+                    states.contains(MaterialState.pressed))
+                  return myPurpleAccentColor.withOpacity(0.2);
 
-              return Colors.transparent;
-            },
+                return Colors.transparent;
+              },
+            ),
           ),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Text(
-            "Download my resume",
-            style: myTextStyle(16, myPurpleAccentColor),
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Text(
+              "Download my resume",
+              style: myTextStyle(16, myPurpleAccentColor),
+            ),
           ),
-        ),
-      ),
+        );
+      })
     ]);
   }
 }

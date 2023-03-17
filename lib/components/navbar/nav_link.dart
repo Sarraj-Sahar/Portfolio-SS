@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:port_s/components/sections/widgets/on_hover_card.dart';
 import 'package:port_s/components/sections/widgets/on_hover_text.dart';
 import 'package:port_s/utils/colors.dart';
 import 'package:port_s/utils/styles.dart';
@@ -13,9 +14,9 @@ class MyNavLink extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OnHoverText(builder: (isHovered) {
+    return OnHoverCard(0, -2, 1.04, builder: (isHovered) {
       final myColor = isHovered ? myPurpleAccentColor : white;
-      final mySize = isHovered ? 14.5 : 14.0;
+      // final mySize = isHovered ? 14.5 : 14.0;
       return Padding(
         padding: const EdgeInsets.symmetric(
           vertical: 8.0,
@@ -28,7 +29,7 @@ class MyNavLink extends StatelessWidget {
             children: [
               TextSpan(
                 text: title,
-                style: myTextStyle(mySize, myColor),
+                style: myTextStyle(14.0, myColor),
               ),
             ],
           ),
