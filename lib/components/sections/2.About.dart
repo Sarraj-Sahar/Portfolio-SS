@@ -84,7 +84,8 @@ class About extends StatelessWidget {
                     //   style: myParagraphStyle(17),
                     // ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 16.0),
+                      padding: EdgeInsets.only(
+                          top: size.height * 0.03, bottom: size.height * 0.04),
                       child: Text(
                         "Here are a few technologies I’ve been working with:",
                         style: myParagraphStyle(17),
