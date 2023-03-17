@@ -21,11 +21,8 @@ class ProjectCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OnHoverCard(builder: (isHovered) {
-      final myColor = isHovered ? discordPurple : myGrey;
-
+    return OnHoverCard(0, -8, 1.01, builder: (isHovered) {
       final titleColor = isHovered ? discordPurple : myWhite;
-
       final myBorderColor = isHovered ? myDeepPurpleColor : Colors.black;
 
       return Container(
@@ -52,18 +49,15 @@ class ProjectCard extends StatelessWidget {
                       Icon(
                         FeatherIcons.folder,
                         color: myDeepPurpleColor,
-                        size: cardWidth * 0.05,
+                        size: cardWidth * 0.055,
                       ),
-                      OnHoverText(builder: (isHovered) {
-                        final iconColor = myColor;
-
-                        final iconSize =
-                            isHovered ? cardWidth * 0.05 : cardWidth * 0.055;
+                      OnHoverCard(0, -8, 1.08, builder: (isHovered) {
+                        final iconColor = isHovered ? discordPurple : myGrey;
 
                         return Icon(
                           FeatherIcons.github,
                           color: iconColor,
-                          size: iconSize,
+                          size: cardWidth * 0.055,
                         );
                       }),
                     ],
@@ -81,13 +75,21 @@ class ProjectCard extends StatelessWidget {
                       // style: myParagraphStyle(
                       //   cardWidth * 0.05,
                       // ),
-                      // overflow: TextOverflow.ellipsis,
+
+                      //FLUTTER: text overflow
+                      //text overflow no longer works when maxLines
+                      //is specified
+                      overflow: TextOverflow.ellipsis,
                       maxLines: 4,
+
+                      //FLUTTER : Textheight=1.5
+                      //When text height is set to 1.5 , text gets get off
+
                       strutStyle: StrutStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: cardWidth * 0.05,
-                        height: 1.5,
-                        forceStrutHeight: true,
+                        // height: 1.5,
+                        // forceStrutHeight: true,
                       ),
                       style: TextStyle(
                         color: myAccentGrey,

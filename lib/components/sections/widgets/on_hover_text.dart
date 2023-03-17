@@ -22,7 +22,6 @@ class _OnHoverTextState extends State<OnHoverText> {
       //inside its state we use widget.param_name
     );
   }
-  //TODO : add scaling effect to 1.1
 
   void onHovered(bool isHovered) {
     setState(() {

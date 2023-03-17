@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:port_s/components/sections/widgets/on_hover_text.dart';
+import 'package:port_s/components/sections/widgets/on_hover_card.dart';
 import 'package:port_s/methods/launchSocials.dart';
 import 'package:port_s/utils/colors.dart';
 import 'package:port_s/utils/styles.dart';
@@ -23,9 +23,9 @@ class MyEmail extends StatelessWidget {
           children: [
             RotatedBox(
               quarterTurns: 45,
-              child: OnHoverText(builder: (isHovered) {
+              child: OnHoverCard(-8, 0, 1.04, builder: (isHovered) {
                 final myColor = isHovered ? myPurpleAccentColor : myAccentGrey;
-                final mySize = isHovered ? 12.5 : 12.0;
+                const mySize = 12.0;
                 return Text(
                   "saharsarraj20.ss@gmail.com",
                   style: myTextStyle(mySize, myColor),

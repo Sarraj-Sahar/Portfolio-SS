@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
-import 'package:port_s/components/widgets/myIconButtons.dart';
-import 'package:port_s/components/sections/widgets/on_hover_text.dart';
+import 'package:port_s/components/sections/widgets/on_hover_card.dart';
 import 'package:port_s/methods/launchSocials.dart';
 import 'package:port_s/utils/colors.dart';
 
@@ -12,8 +11,6 @@ class MySocials extends StatelessWidget {
   LaunchSocials method = LaunchSocials();
   @override
   Widget build(BuildContext context) {
-    const nsize = 18.0;
-    const hsize = 19.0;
     return Padding(
       padding: const EdgeInsets.only(right: 20.0),
       child: SizedBox(
@@ -22,9 +19,9 @@ class MySocials extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            OnHoverText(builder: (isHovered) {
+            OnHoverCard(0, -8, 1.04, builder: (isHovered) {
               final color = isHovered ? myPurpleAccentColor : myAccentGrey;
-              final size = isHovered ? hsize : nsize;
+              final size = 18.0;
               return IconButton(
                   icon: Icon(FeatherIcons.github),
                   color: color,
@@ -39,9 +36,9 @@ class MySocials extends StatelessWidget {
             //     method.launchURL(
             //         "https://www.linkedin.com/in/sahar-sarraj-9686b3207/")),
 
-            OnHoverText(builder: (isHovered) {
+            OnHoverCard(0, -8, 1.04, builder: (isHovered) {
               final color = isHovered ? myPurpleAccentColor : myAccentGrey;
-              final size = isHovered ? hsize : nsize;
+              final size = 18.0;
               return IconButton(
                   icon: Icon(FeatherIcons.linkedin),
                   color: color,
@@ -52,9 +49,9 @@ class MySocials extends StatelessWidget {
                   });
             }),
             //
-            OnHoverText(builder: (isHovered) {
+            OnHoverCard(0, -8, 1.04, builder: (isHovered) {
               final color = isHovered ? myPurpleAccentColor : myAccentGrey;
-              final size = isHovered ? hsize : nsize;
+              final size = 18.0;
               return IconButton(
                   icon: Icon(FeatherIcons.phone),
                   color: color,
@@ -64,9 +61,9 @@ class MySocials extends StatelessWidget {
                   });
             }),
             //
-            OnHoverText(builder: (isHovered) {
+            OnHoverCard(0, -8, 1.04, builder: (isHovered) {
               final color = isHovered ? myPurpleAccentColor : myAccentGrey;
-              final size = isHovered ? hsize : nsize;
+              final size = 18.0;
               return IconButton(
                   icon: Icon(FeatherIcons.mail),
                   color: color,

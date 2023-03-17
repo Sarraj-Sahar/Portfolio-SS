@@ -21,7 +21,7 @@ class SectionTtitle extends StatelessWidget {
             // style: myTextStyle(size.width * 0.025, myPurpleAccentColor),
           ),
         ),
-        Flexible(
+        Expanded(
           child: Text(
             title,
             style: mySectionStyle(25, myWhite),
