@@ -15,7 +15,7 @@ class LaunchSocials {
   }
 
   launchCaller() async {
-    const tel = "tel:9595242507";
+    const tel = "tel:+21694449450";
     if (await canLaunch(tel)) {
       await launch(tel);
     } else {

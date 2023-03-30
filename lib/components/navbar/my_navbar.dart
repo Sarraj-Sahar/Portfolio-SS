@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:port_s/components/navbar/my_text_button.dart';
+import 'package:port_s/utils/colors.dart';
 import 'nav_link.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 
@@ -16,9 +17,11 @@ class MyNavBar extends StatelessWidget {
     //EXTRA : make navbar blurry transparent
     return Container(
       width: size.width,
-      height: size.height * 0.14,
+      height: size.height * 0.12,
       decoration: const BoxDecoration(
-        color: Color(0XFF181818),
+        // color: Color(0XFF181818),
+        color: Colors.red,
+
         border: Border(
           bottom: BorderSide(width: 0.1, color: Colors.white),
         ),

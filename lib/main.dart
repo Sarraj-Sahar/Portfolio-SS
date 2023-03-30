@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(),
       home: LayoutBuilder(
         builder: (context, constraints) {
-          if (constraints.maxWidth <= 450) {
+          if (constraints.maxWidth <= 540) {
             return const MobileBody();
           } else {
             return const DesktopBody();

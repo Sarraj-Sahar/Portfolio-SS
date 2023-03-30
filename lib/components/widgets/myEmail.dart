@@ -23,7 +23,7 @@ class MyEmail extends StatelessWidget {
           children: [
             RotatedBox(
               quarterTurns: 45,
-              child: OnHoverCard(-8, 0, 1.04, builder: (isHovered) {
+              child: OnHoverCard(-8.0, 0.0, 1.04, builder: (isHovered) {
                 final myColor = isHovered ? myPurpleAccentColor : myAccentGrey;
                 const mySize = 12.0;
                 return Text(

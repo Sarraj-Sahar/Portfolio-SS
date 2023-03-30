@@ -19,7 +19,7 @@ class MySocials extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            OnHoverCard(0, -8, 1.04, builder: (isHovered) {
+            OnHoverCard(0.0, -8.0, 1.04, builder: (isHovered) {
               final color = isHovered ? myPurpleAccentColor : myAccentGrey;
               final size = 18.0;
               return IconButton(
@@ -36,7 +36,7 @@ class MySocials extends StatelessWidget {
             //     method.launchURL(
             //         "https://www.linkedin.com/in/sahar-sarraj-9686b3207/")),
 
-            OnHoverCard(0, -8, 1.04, builder: (isHovered) {
+            OnHoverCard(0.0, -8.0, 1.04, builder: (isHovered) {
               final color = isHovered ? myPurpleAccentColor : myAccentGrey;
               final size = 18.0;
               return IconButton(
@@ -49,7 +49,7 @@ class MySocials extends StatelessWidget {
                   });
             }),
             //
-            OnHoverCard(0, -8, 1.04, builder: (isHovered) {
+            OnHoverCard(0.0, -8.0, 1.04, builder: (isHovered) {
               final color = isHovered ? myPurpleAccentColor : myAccentGrey;
               final size = 18.0;
               return IconButton(
@@ -61,7 +61,7 @@ class MySocials extends StatelessWidget {
                   });
             }),
             //
-            OnHoverCard(0, -8, 1.04, builder: (isHovered) {
+            OnHoverCard(0.0, -8.0, 1.04, builder: (isHovered) {
               final color = isHovered ? myPurpleAccentColor : myAccentGrey;
               final size = 18.0;
               return IconButton(

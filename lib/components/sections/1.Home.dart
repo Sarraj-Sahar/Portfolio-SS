@@ -4,6 +4,8 @@ import 'package:port_s/methods/launchSocials.dart';
 import 'package:port_s/utils/colors.dart';
 import 'package:port_s/utils/styles.dart';
 
+import '../navbar/my_logo.dart';
+
 class HomeHero extends StatelessWidget {
   Size size;
   HomeHero(this.size, {super.key});
@@ -13,26 +15,21 @@ class HomeHero extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      SizedBox(
-        height: size.height * 0.1,
-      ),
+      SizedBox(height: size.height * 0.08),
       Row(
         children: [
-          const Text(
-            "Hi there, welcome to my portfolio ! ",
-            style: TextStyle(
-              color: myWhite,
-              fontWeight: FontWeight.w500,
-              fontFamily: "RobotoMono",
-              fontSize: 16,
+          const Flexible(
+            child: Text(
+              "Hi there, welcome to my portfolio ! ",
+              style: TextStyle(
+                color: myWhite,
+                fontWeight: FontWeight.w500,
+                fontFamily: "RobotoMono",
+                fontSize: 16.0,
+              ),
             ),
           ),
-          //EXTRA : add some cursor "animation" when image is hovered
-          Image.asset("../../../assets/imgs/silky2.gif", height: 30, width: 30),
-          // Image.asset("../../../assets/imgs/glass_heart.gif",
-          //     height: 50, width: 50),
-          // Image.asset("../../../assets/imgs/starsss.gif",
-          //     height: 50, width: 50),
+          Image.asset("assets/imgs/silky2.gif", height: 30.0, width: 30.0),
         ],
       ),
       SizedBox(
@@ -42,11 +39,11 @@ class HomeHero extends StatelessWidget {
       RichText(
         text: TextSpan(
             text: "Sahar",
-            style: mySectionStyle(68, discordPurple),
+            style: mySectionStyle(90.0, discordPurple),
             children: [
               TextSpan(
                 text: " here.",
-                style: mySectionStyle(68, myWhite),
+                style: mySectionStyle(90.0, myWhite),
               )
             ]),
       ),
@@ -58,25 +55,26 @@ class HomeHero extends StatelessWidget {
         style: TextStyle(
             color: myAccentGrey,
             fontFamily: "Calibre",
-            fontSize: 60,
+            fontSize: 80.0,
             fontWeight: FontWeight.bold,
-            letterSpacing: 2),
+            letterSpacing: 2.0),
       ),
       SizedBox(
         height: size.height * 0.04,
       ),
       Text(
-        "I am a software engineer who likes building mobile apps.I particularly\nenjoy the creative process of designing them and coming up with \nvisually appealing and attractive interfaces for my apps.",
-        style: myParagraphStyle(16.0),
+        "Hi, I am a software engineer/student with a passion for developing mobile apps.\nI particularly enjoy designing interfaces that are both visually appealing and intuitive,\nelevating the user experience and highlighting an app's full potential.",
+        // That's why I am constantly working on enhancing my technical skills so I can bring creative visions to life.",
+        style: myParagraphStyle(18.0),
       ),
       SizedBox(
         height: size.height * 0.08,
       ),
-      OnHoverCard(0, -8, 1, builder: (isHovered) {
+      OnHoverCard(0.0, -8.0, 1.0, builder: (isHovered) {
         return TextButton(
           onPressed: () {
-            //TODO:  put cv on google drive and launchURL to that link
-            method.launchEmail();
+            method.launchURL(
+                "https://drive.google.com/file/d/13YbBKEyciXPYKdUwgQmx04QTXOw99xwJ/view?usp=sharing");
           },
           style: ButtonStyle(
             // foregroundColor: MaterialStateProperty.resolveWith<Color>(
@@ -100,7 +98,10 @@ class HomeHero extends StatelessWidget {
             padding: const EdgeInsets.all(10.0),
             child: Text(
               "Download my resume",
-              style: myTextStyle(16, myPurpleAccentColor),
+              style: myTextStyle(
+                16.0,
+                myPurpleAccentColor,
+              ),
             ),
           ),
         );

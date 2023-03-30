@@ -12,27 +12,24 @@ class SectionTtitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Flexible(
-          child: Text(
-            number,
-            style: myTextStyle(22, myPurpleAccentColor),
+        Text(
+          number,
+          style: myTextStyle(22.0, myPurpleAccentColor),
 
-            // style: myTextStyle(size.width * 0.025, myPurpleAccentColor),
-          ),
+          // style: myTextStyle(size.width * 0.025, myPurpleAccentColor),
         ),
-        Flexible(
-          child: Text(
-            title,
-            style: mySectionStyle(25, myWhite),
+        Text(
+          title,
+          style: mySectionStyle(25.0, myWhite),
 
-            // style: mySectionStyle(size.width * 0.03, myWhite),
-          ),
+          // style: mySectionStyle(size.width * 0.03, myWhite),
         ),
         Padding(
           padding: EdgeInsets.only(left: size.width * 0.025, top: 5.0),
           child: Container(
-            width: size.width * 0.2,
+            width: size.width > 540 ? size.width * 0.2 : size.width * 0.1,
             height: 1,
             color: myAccentGrey,
           ),

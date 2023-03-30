@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:port_s/components/sections/widgets/on_hover_card.dart';
-import 'package:port_s/components/sections/widgets/on_hover_text.dart';
 import 'package:port_s/utils/colors.dart';
 import 'package:port_s/utils/styles.dart';
 
@@ -14,7 +13,7 @@ class MyNavLink extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OnHoverCard(0, -2, 1.04, builder: (isHovered) {
+    return OnHoverCard(0.0, -2.0, 1.04, builder: (isHovered) {
       final myColor = isHovered ? myPurpleAccentColor : white;
       // final mySize = isHovered ? 14.5 : 14.0;
       return Padding(

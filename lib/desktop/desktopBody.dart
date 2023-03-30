@@ -5,6 +5,7 @@ import 'package:port_s/components/sections/1.Home.dart';
 import 'package:port_s/components/sections/2.About.dart';
 import 'package:port_s/components/sections/3.Work.dart';
 import 'package:port_s/components/sections/4.Projects.dart';
+import 'package:port_s/components/sections/5.Contact.dart';
 import 'package:port_s/components/widgets/myEmail.dart';
 import 'package:port_s/components/widgets/mySocials.dart';
 import 'package:port_s/components/widgets/myStars.dart';
@@ -80,78 +81,99 @@ class _DesktopBodyState extends State<DesktopBody> {
           backgroundColor: myGreyColor,
           extendBody: true,
           body: Stack(children: [
-            //add starts here
             MyStars(size),
-            //
             SingleChildScrollView(
               physics: const ScrollPhysics(),
               primary: true,
               scrollDirection: Axis.vertical,
               child: Column(children: [
+                // Text(
+                //   "${size.width}",
+                //   style: TextStyle(color: Colors.white),
+                // ),
+
+                //
                 // MyNavBar(size, context),
-                ////////
+                ///NAVBAR
                 //CHANGEME: change this container of navbar to a SliverAppbar
                 //=> will give us the option to dismiss navabr/ show it again on scroll up...
                 //many other features like opacity of navbar ON scroll...
-                Container(
-                  width: size.width,
-                  height: size.height * 0.14,
-                  decoration: const BoxDecoration(
-                    color: Color(0XFF181818),
-                    border: Border(
-                      bottom: BorderSide(width: 0.1, color: Colors.white),
-                    ),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 2.0),
-                    child: Row(
-                      // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        MyLogo(),
-                        SizedBox(
-                          width: size.width * 0.25,
+                size.width >= 736
+                    ? Container(
+                        width: size.width,
+                        height: size.height * 0.12,
+                        decoration: const BoxDecoration(
+                          color: myGreyColor,
+                          // border: Border(
+                          //   bottom: BorderSide(width: 0.1, color: Colors.white),
+                          // ),
                         ),
-                        Expanded(
-                          child: DefaultTabController(
-                            length: 4,
-                            child: TabBar(
-                                padding: EdgeInsets.zero,
-                                indicatorPadding: EdgeInsets.zero,
-                                labelPadding: EdgeInsets.zero,
-                                indicatorColor: Colors.transparent,
-                                onTap: (index) async {
-                                  _scrollToIndex(index);
-                                },
-                                tabs: [
-                                  Tab(
-                                    child: MyNavLink(
-                                        number: "01. ", title: "About"),
-                                  ),
-                                  Tab(
-                                    child: MyNavLink(
-                                        number: "02. ", title: "Experience"),
-                                  ),
-                                  Tab(
-                                    child: MyNavLink(
-                                        number: "03. ", title: "Projects"),
-                                  ),
-                                  Tab(
-                                    child: MyNavLink(
-                                        number: "04. ", title: "Contact"),
-                                  ),
-                                ]),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 2.0),
+                          child: Row(
+                            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              MyLogo(),
+                              SizedBox(
+                                width: size.width * 0.25,
+                              ),
+                              Expanded(
+                                child: DefaultTabController(
+                                  length: 4,
+                                  child: TabBar(
+                                      padding: EdgeInsets.zero,
+                                      indicatorPadding: EdgeInsets.zero,
+                                      labelPadding: EdgeInsets.zero,
+                                      indicatorColor: Colors.transparent,
+                                      onTap: (index) async {
+                                        _scrollToIndex(index);
+                                      },
+                                      tabs: [
+                                        Tab(
+                                          child: MyNavLink(
+                                              number: "01. ", title: "About"),
+                                        ),
+                                        Tab(
+                                          child: MyNavLink(
+                                              number: "02. ",
+                                              title: "Experience"),
+                                        ),
+                                        Tab(
+                                          child: MyNavLink(
+                                              number: "03. ",
+                                              title: "Projects"),
+                                        ),
+                                        Tab(
+                                          child: MyNavLink(
+                                              number: "04. ", title: "Contact"),
+                                        ),
+                                      ]),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
-                        // MyTextButton(
-                        //     text: "Resume",
-                        //     padding: 10,
-                        //     fontSize: 14.0,
-                        //     borderWidth: 1,
-                        //     myFunction: () {})
-                      ],
-                    ),
-                  ),
-                ),
+                      )
+                    : Container(
+                        width: size.width,
+                        height: size.height * 0.12,
+                        decoration: const BoxDecoration(
+                          color: myGreyColor,
+                          // border: Border(
+                          //   bottom: BorderSide(width: 0.1, color: Colors.white),
+                          // ),
+                        ),
+                        child: Padding(
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 2.0),
+                            child: Row(
+                                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  MyLogo(),
+                                  SizedBox(
+                                    width: size.width * 0.25,
+                                  ),
+                                ]))),
 
                 Row(
                   children: [
@@ -200,7 +222,16 @@ class _DesktopBodyState extends State<DesktopBody> {
                                       child: Projects(size: size),
                                     ),
                                     SizedBox(
-                                      height: size.height * 0.20,
+                                      height: size.height * 0.15,
+                                    ),
+
+                                    //Contact
+                                    _wrapScrollTag(
+                                      index: 3,
+                                      child: ContactMe(size: size),
+                                    ),
+                                    SizedBox(
+                                      height: size.height * 0.1,
                                     ),
                                   ],
                                 ),
