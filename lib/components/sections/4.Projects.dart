@@ -35,30 +35,54 @@ class Projects extends StatelessWidget {
             //         : 1,
             crossAxisCount: size.width > 550 ? 2 : 1,
             children: [
-              ProjectCard(
-                  size,
-                  "Xypnos-Labs Training",
-                  "Online learning platform mobile app, includes video courses.",
-                  "Flutter ",
-                  "https://github.com/Sarraj-Sahar/Xypnos-Labs-Training"),
-              ProjectCard(
-                  size,
-                  "Indoor Navigation App",
-                  "Mobile app for indoor navigation on campus.",
-                  "Kotlin  ARCore Firebase",
-                  "https://github.com/Sarraj-Sahar/Indoor-Navigation"),
-              ProjectCard(
-                  size,
-                  "Diabetese Prediction Web App",
-                  "Machine Learning Web Application that can predict whether a patient has diabetes based on various factors.",
-                  "Python  SKLearn  Streamlit  Kaggle",
-                  "https://github.com/Sarraj-Sahar/Diabetes_Prediction_App"),
-              ProjectCard(
-                  size,
-                  "Talk-Talk Chat App",
-                  "WhatsApp clone built with java and real-time database for user authentication.",
-                  "Android  Java  Firebase",
-                  "https://github.com/Sarraj-Sahar/Talk-Talk-Chat-App-with-Java"),
+              GestureDetector(
+                onTap: () {
+                  method.launchURL(
+                      "https://github.com/Sarraj-Sahar/Xypnos-Labs-Training");
+                },
+                child: ProjectCard(
+                    size,
+                    "Xypnos-Labs Training",
+                    "Online learning platform mobile app, includes video courses.",
+                    "Flutter ",
+                    "https://github.com/Sarraj-Sahar/Xypnos-Labs-Training"),
+              ),
+              GestureDetector(
+                onTap: () {
+                  method.launchURL(
+                      "https://github.com/Sarraj-Sahar/Indoor-Navigation");
+                },
+                child: ProjectCard(
+                    size,
+                    "Indoor Navigation App",
+                    "Mobile app for indoor navigation on campus.",
+                    "Kotlin  ARCore Firebase",
+                    "https://github.com/Sarraj-Sahar/Indoor-Navigation"),
+              ),
+              GestureDetector(
+                onTap: () {
+                  method.launchURL(
+                      "https://github.com/Sarraj-Sahar/Diabetes_Prediction_App");
+                },
+                child: ProjectCard(
+                    size,
+                    "Diabetese Prediction Web App",
+                    "Machine Learning Web Application that can predict whether a patient has diabetes based on various factors.",
+                    "Python  SKLearn  Streamlit  Kaggle",
+                    "https://github.com/Sarraj-Sahar/Diabetes_Prediction_App"),
+              ),
+              GestureDetector(
+                onTap: () {
+                  method.launchURL(
+                      "https://github.com/Sarraj-Sahar/Talk-Talk-Chat-App-with-Java");
+                },
+                child: ProjectCard(
+                    size,
+                    "Talk-Talk Chat App",
+                    "WhatsApp clone built with java and real-time database for user authentication.",
+                    "Android  Java  Firebase",
+                    "https://github.com/Sarraj-Sahar/Talk-Talk-Chat-App-with-Java"),
+              ),
             ],
           ),
         ),
