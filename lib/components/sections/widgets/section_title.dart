@@ -20,7 +20,7 @@ class SectionTtitle extends StatelessWidget {
 
           // style: myTextStyle(size.width * 0.025, myPurpleAccentColor),
         ),
-        Text(
+        SelectableText(
           title,
           style: mySectionStyle(25.0, myWhite),
 

@@ -14,14 +14,14 @@ class ContactMe extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(
+        SelectableText(
           "04. let's Connect !",
           style: myTextStyle(18.0, myPurpleAccentColor),
         ),
         Padding(
           padding: EdgeInsets.only(
               top: size.height * 0.03, bottom: size.height * 0.06),
-          child: Text(
+          child: SelectableText(
             "I am actively seeking new opportunities and challenges.",
             textAlign: TextAlign.center,
             style: myParagraphStyle(16.0),
@@ -52,7 +52,7 @@ class ContactMe extends StatelessWidget {
             ),
             child: Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Text(
+              child: SelectableText(
                 "Say Hi",
                 style: myTextStyle(16.0, myPurpleAccentColor),
               ),

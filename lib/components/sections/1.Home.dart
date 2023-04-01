@@ -19,7 +19,7 @@ class HomeHero extends StatelessWidget {
       Row(
         children: [
           const Flexible(
-            child: Text(
+            child: SelectableText(
               "Hi there, welcome to my portfolio ! ",
               style: TextStyle(
                 color: myWhite,
@@ -36,8 +36,8 @@ class HomeHero extends StatelessWidget {
         height: size.height * 0.03,
       ),
       //EXTRA: add typewriter animation
-      RichText(
-        text: TextSpan(
+      SelectableText.rich(
+        TextSpan(
             text: "Sahar",
             style: mySectionStyle(90.0, discordPurple),
             children: [
@@ -50,7 +50,7 @@ class HomeHero extends StatelessWidget {
       SizedBox(
         height: size.height * 0.01,
       ),
-      const Text(
+      const SelectableText(
         "I build mobile apps.",
         style: TextStyle(
             color: myAccentGrey,
@@ -62,7 +62,7 @@ class HomeHero extends StatelessWidget {
       SizedBox(
         height: size.height * 0.04,
       ),
-      Text(
+      SelectableText(
         "Hi, I am a software engineer/student with a passion for developing mobile apps.\nI particularly enjoy designing interfaces that are both visually appealing and intuitive,\nelevating the user experience and highlighting an app's full potential.",
         // That's why I am constantly working on enhancing my technical skills so I can bring creative visions to life.",
         style: myParagraphStyle(18.0),
@@ -74,7 +74,7 @@ class HomeHero extends StatelessWidget {
         return TextButton(
           onPressed: () {
             method.launchURL(
-                "https://drive.google.com/file/d/1-g2Bqc6kaeXnq1SWz8OGroVkO3C06TW0/view?usp=sharing");
+                "https://drive.google.com/file/d/1Q9Rza3dH1CXyFG5bgb3P728HxoJ0cKDi/view?usp=sharing");
           },
           style: ButtonStyle(
             // foregroundColor: MaterialStateProperty.resolveWith<Color>(

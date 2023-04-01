@@ -44,67 +44,53 @@ class ProjectCard extends StatelessWidget {
             padding: EdgeInsets.all(cardHeight * 0.1),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
-                  padding: EdgeInsets.only(
-                      bottom: size.width > 540
-                          ? size.height * 0.01
-                          : size.height * 0.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Icon(
-                        FeatherIcons.folder,
-                        color: myDeepPurpleColor,
-                        size: cardWidth * 0.055,
-                      ),
-                      OnHoverCard(0.0, -8.0, 1.08, builder: (isHovered) {
-                        final iconColor = isHovered ? discordPurple : myGrey;
-
-                        return IconButton(
-                          onPressed: () {
-                            method.launchURL(gitRepo);
-                          },
-                          icon: Icon(FeatherIcons.github),
-                          color: iconColor,
-                          iconSize: cardWidth * 0.055,
-                        );
-                      }),
-                    ],
+                  padding: EdgeInsets.only(bottom: 8.0),
+                  child: Icon(
+                    FeatherIcons.folder,
+                    color: myDeepPurpleColor,
+                    size: cardWidth * 0.055,
                   ),
                 ),
+                /////////
                 Flexible(
-                  child: Text(
-                    title,
-                    overflow: TextOverflow.fade,
-                    style: mySectionStyle(cardWidth * 0.06, titleColor),
+                  child: Padding(
+                    padding: const EdgeInsets.only(bottom: 8.0),
+                    child: Text(
+                      title,
+                      overflow: TextOverflow.ellipsis,
+                      style: mySectionStyle(cardWidth * 0.06, titleColor),
+                    ),
                   ),
                 ),
                 Expanded(
-                  child: Text(description,
-
-                      //FLUTTER: text overflow
-                      //text overflow no longer works when maxLines is specified
+                  child: Padding(
+                    padding: const EdgeInsets.only(bottom: 2.0),
+                    child: Text(
+                      description,
                       overflow: TextOverflow.ellipsis,
                       maxLines: 3,
+                      style: TextStyle(
+                        color: myAccentGrey,
+                        fontWeight: FontWeight.w500,
+                        fontSize: cardWidth * 0.05,
+                        wordSpacing: 0.75,
+                        height: 1.2,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+
                       //FLUTTER : Textheight=1.5
                       //When text height is set to 1.5 , text gets cut off
-
                       // strutStyle: StrutStyle(
                       //   fontWeight: FontWeight.w500,
                       //   fontSize: cardWidth * 0.05,
                       //   height: 1.5,
                       //   forceStrutHeight: true,
                       // ),
-                      style: TextStyle(
-                        color: myAccentGrey,
-                        fontWeight: FontWeight.w500,
-                        fontSize: cardWidth * 0.05,
-                        wordSpacing: 0.75,
-                        // height: 1.5,
-                        overflow: TextOverflow.ellipsis,
-                      )),
+                    ),
+                  ),
                 ),
                 // Flexible(
                 //   child:
@@ -112,8 +98,8 @@ class ProjectCard extends StatelessWidget {
                   tech,
                   overflow: TextOverflow.ellipsis,
                   style: myTextStyle(cardWidth * 0.04, myGrey),
-                  // ),
                 ),
+                // ),
               ],
             ),
           );

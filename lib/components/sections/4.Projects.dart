@@ -68,7 +68,7 @@ class Projects extends StatelessWidget {
                     size,
                     "Diabetese Prediction Web App",
                     "Machine Learning Web Application that can predict whether a patient has diabetes based on various factors.",
-                    "Python  SKLearn  Streamlit  Kaggle",
+                    "Python  SKLearn  Streamlit ",
                     "https://github.com/Sarraj-Sahar/Diabetes_Prediction_App"),
               ),
               GestureDetector(
