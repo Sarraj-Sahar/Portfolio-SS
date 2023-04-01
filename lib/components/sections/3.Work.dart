@@ -46,8 +46,8 @@ class Work extends StatelessWidget {
                           padding: EdgeInsets.only(
                             bottom: size.height * 0.02,
                           ),
-                          child: SelectableText.rich(
-                            TextSpan(
+                          child: RichText(
+                            text: TextSpan(
                               text: "Flutter developer ",
                               style: mySectionStyle(22.0, myWhite),
                               children: [
@@ -92,8 +92,8 @@ class Work extends StatelessWidget {
                           padding: EdgeInsets.only(
                             bottom: size.height * 0.02,
                           ),
-                          child: SelectableText.rich(
-                            TextSpan(
+                          child: RichText(
+                            text: TextSpan(
                               text: "Flutter developer ",
                               style: mySectionStyle(22.0, myWhite),
                               children: [
@@ -137,8 +137,8 @@ class Work extends StatelessWidget {
                           padding: EdgeInsets.only(
                             bottom: size.height * 0.02,
                           ),
-                          child: SelectableText.rich(
-                            TextSpan(
+                          child: RichText(
+                            text: TextSpan(
                               text: "Flutter developer ",
                               style: mySectionStyle(22.0, myWhite),
                               children: [
@@ -185,7 +185,7 @@ Widget JobDetail(String text, Size size) {
           ),
         ),
         Flexible(
-          child: SelectableText(
+          child: Text(
             text,
             style: TextStyle(
               color: myWhite,

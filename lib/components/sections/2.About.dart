@@ -37,8 +37,8 @@ class About extends StatelessWidget {
                       decoration: const BoxDecoration(
                           border: Border(
                               left: BorderSide(color: myDeepPurpleColor))),
-                      child: SelectableText.rich(
-                        TextSpan(
+                      child: RichText(
+                        text: TextSpan(
                             text: "I graduated last year with a Bachelor's in ",
                             style: myParagraphStyle(17.0),
                             children: [
@@ -84,7 +84,7 @@ class About extends StatelessWidget {
                           top: size.height * 0.04,
                           bottom: size.height * 0.04,
                           left: 16),
-                      child: SelectableText(
+                      child: Text(
                         "Here are a few technologies I’ve been working with:",
                         style: myParagraphStyle(17.0),
                       ),
@@ -164,7 +164,7 @@ Widget Technology(Size size, String name) {
           color: myPurpleAccentColor,
         ),
       ),
-      SelectableText(
+      Text(
         name,
         style: TextStyle(
           color: myWhite,

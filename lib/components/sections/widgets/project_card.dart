@@ -60,8 +60,11 @@ class ProjectCard extends StatelessWidget {
                     padding: const EdgeInsets.only(bottom: 8.0),
                     child: Text(
                       title,
-                      overflow: TextOverflow.ellipsis,
-                      style: mySectionStyle(cardWidth * 0.06, titleColor),
+                      // overflow: TextOverflow.ellipsis,
+                      style: mySectionStyle(
+                        cardWidth * 0.06,
+                        titleColor,
+                      ),
                     ),
                   ),
                 ),
@@ -70,7 +73,6 @@ class ProjectCard extends StatelessWidget {
                     padding: const EdgeInsets.only(bottom: 2.0),
                     child: Text(
                       description,
-                      overflow: TextOverflow.ellipsis,
                       maxLines: 3,
                       style: TextStyle(
                         color: myAccentGrey,

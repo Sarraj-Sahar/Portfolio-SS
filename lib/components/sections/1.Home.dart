@@ -19,7 +19,7 @@ class HomeHero extends StatelessWidget {
       Row(
         children: [
           const Flexible(
-            child: SelectableText(
+            child: Text(
               "Hi there, welcome to my portfolio ! ",
               style: TextStyle(
                 color: myWhite,
@@ -36,8 +36,8 @@ class HomeHero extends StatelessWidget {
         height: size.height * 0.03,
       ),
       //EXTRA: add typewriter animation
-      SelectableText.rich(
-        TextSpan(
+      RichText(
+        text: TextSpan(
             text: "Sahar",
             style: mySectionStyle(90.0, discordPurple),
             children: [
@@ -50,7 +50,7 @@ class HomeHero extends StatelessWidget {
       SizedBox(
         height: size.height * 0.01,
       ),
-      const SelectableText(
+      const Text(
         "I build mobile apps.",
         style: TextStyle(
             color: myAccentGrey,
@@ -62,7 +62,7 @@ class HomeHero extends StatelessWidget {
       SizedBox(
         height: size.height * 0.04,
       ),
-      SelectableText(
+      Text(
         "Hi, I am a software engineer/student with a passion for developing mobile apps.\nI particularly enjoy designing interfaces that are both visually appealing and intuitive,\nelevating the user experience and highlighting an app's full potential.",
         // That's why I am constantly working on enhancing my technical skills so I can bring creative visions to life.",
         style: myParagraphStyle(18.0),
