@@ -36,8 +36,8 @@ class HomeHero extends StatelessWidget {
         height: size.height * 0.03,
       ),
       //EXTRA: add typewriter animation
-      RichText(
-        text: TextSpan(
+      Text.rich(
+        TextSpan(
             text: "Sahar",
             style: mySectionStyle(90.0, discordPurple),
             children: [

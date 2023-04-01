@@ -37,8 +37,8 @@ class About extends StatelessWidget {
                       decoration: const BoxDecoration(
                           border: Border(
                               left: BorderSide(color: myDeepPurpleColor))),
-                      child: RichText(
-                        text: TextSpan(
+                      child: Text.rich(
+                        TextSpan(
                             text: "I graduated last year with a Bachelor's in ",
                             style: myParagraphStyle(17.0),
                             children: [

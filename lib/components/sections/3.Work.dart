@@ -46,8 +46,8 @@ class Work extends StatelessWidget {
                           padding: EdgeInsets.only(
                             bottom: size.height * 0.02,
                           ),
-                          child: RichText(
-                            text: TextSpan(
+                          child: Text.rich(
+                            TextSpan(
                               text: "Flutter developer ",
                               style: mySectionStyle(22.0, myWhite),
                               children: [
@@ -92,8 +92,8 @@ class Work extends StatelessWidget {
                           padding: EdgeInsets.only(
                             bottom: size.height * 0.02,
                           ),
-                          child: RichText(
-                            text: TextSpan(
+                          child: Text.rich(
+                            TextSpan(
                               text: "Flutter developer ",
                               style: mySectionStyle(22.0, myWhite),
                               children: [
@@ -137,8 +137,8 @@ class Work extends StatelessWidget {
                           padding: EdgeInsets.only(
                             bottom: size.height * 0.02,
                           ),
-                          child: RichText(
-                            text: TextSpan(
+                          child: Text.rich(
+                            TextSpan(
                               text: "Flutter developer ",
                               style: mySectionStyle(22.0, myWhite),
                               children: [
