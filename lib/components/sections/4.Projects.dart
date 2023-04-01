@@ -19,8 +19,8 @@ class Projects extends StatelessWidget {
         Padding(
           padding: EdgeInsets.only(
               top: 26.0,
-              right: size.width * 0.03,
-              left: size.width * 0.03,
+              right: size.width * 0.05,
+              left: size.width * 0.05,
               bottom: size.height * 0.08),
           child: GridView.count(
             childAspectRatio: 1.5 / 1,
