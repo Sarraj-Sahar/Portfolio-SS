@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
+import 'package:port_s/components/sections/widgets/on_hover_card.dart';
 import 'package:port_s/components/sections/widgets/section_title.dart';
+import 'package:port_s/methods/launchSocials.dart';
 import 'package:port_s/utils/colors.dart';
 import 'package:port_s/utils/styles.dart';
+import 'package:flutter/gestures.dart';
+//FLUTTER check the gestures package
 
 class Work extends StatelessWidget {
   Size size;
   Work({super.key, required this.size});
-
+  LaunchSocials method = LaunchSocials();
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -46,18 +50,26 @@ class Work extends StatelessWidget {
                           padding: EdgeInsets.only(
                             bottom: size.height * 0.02,
                           ),
-                          child: Text.rich(
-                            TextSpan(
-                              text: "Flutter developer ",
-                              style: mySectionStyle(22.0, myWhite),
-                              children: [
-                                TextSpan(
-                                  text: "@ Enova Robotics",
-                                  style: mySectionStyle(26.0, discordPurple),
-                                ),
-                              ],
-                            ),
-                          ),
+                          child:
+                              OnHoverCard(0.0, -5.0, 1.0, builder: (isHovered) {
+                            final myColor =
+                                isHovered ? myDeepPurpleColor : discordPurple;
+                            return Text.rich(
+                              TextSpan(
+                                text: "Flutter developer ",
+                                style: mySectionStyle(22.0, myWhite),
+                                children: [
+                                  TextSpan(
+                                    text: "@ Enova Robotics",
+                                    style: mySectionStyle(26.0, myColor),
+                                    recognizer: TapGestureRecognizer()
+                                      ..onTap = () => method.launchURL(
+                                          "https://www.enovarobotics.eu/"),
+                                  ),
+                                ],
+                              ),
+                            );
+                          }),
                         ),
                         JobDetail(
                             "Mobile developer for Enova Robotics' Security Robot mobile application as part of my end-of-term internship.",
@@ -89,22 +101,29 @@ class Work extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: EdgeInsets.only(
-                            bottom: size.height * 0.02,
-                          ),
-                          child: Text.rich(
-                            TextSpan(
-                              text: "Flutter developer ",
-                              style: mySectionStyle(22.0, myWhite),
-                              children: [
-                                TextSpan(
-                                  text: "@ Xypnos Labs",
-                                  style: mySectionStyle(26.0, discordPurple),
-                                ),
-                              ],
+                            padding: EdgeInsets.only(
+                              bottom: size.height * 0.02,
                             ),
-                          ),
-                        ),
+                            child: OnHoverCard(0.0, -5.0, 1.0,
+                                builder: (isHovered) {
+                              final myColor =
+                                  isHovered ? myDeepPurpleColor : discordPurple;
+                              return Text.rich(
+                                TextSpan(
+                                  text: "Flutter developer ",
+                                  style: mySectionStyle(22.0, myWhite),
+                                  children: [
+                                    TextSpan(
+                                      text: "@ Xypnos Labs",
+                                      style: mySectionStyle(26.0, myColor),
+                                      recognizer: TapGestureRecognizer()
+                                        ..onTap = () => method.launchURL(
+                                            "https://xypnos-labs.com/"),
+                                    ),
+                                  ],
+                                ),
+                              );
+                            })),
                         JobDetail(
                             "Led the modeling and design for both the mobile and desktop versions of the app.",
                             size),
@@ -134,22 +153,31 @@ class Work extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: EdgeInsets.only(
-                            bottom: size.height * 0.02,
-                          ),
-                          child: Text.rich(
-                            TextSpan(
-                              text: "Flutter developer ",
-                              style: mySectionStyle(22.0, myWhite),
-                              children: [
-                                TextSpan(
-                                  text: "@ Thnity",
-                                  style: mySectionStyle(26.0, discordPurple),
-                                ),
-                              ],
+                            padding: EdgeInsets.only(
+                              bottom: size.height * 0.02,
                             ),
-                          ),
-                        ),
+                            child:
+                                //changed RichText to Text.rich so it can be selectable --> RichText is a low level widget so it doesn't work ( it's more like RawText)
+                                OnHoverCard(0.0, -5.0, 1.0,
+                                    builder: (isHovered) {
+                              final myColor =
+                                  isHovered ? myDeepPurpleColor : discordPurple;
+                              return Text.rich(
+                                TextSpan(
+                                  text: "Flutter developer ",
+                                  style: mySectionStyle(22.0, myWhite),
+                                  children: [
+                                    TextSpan(
+                                      text: "@ Thnity",
+                                      style: mySectionStyle(26.0, myColor),
+                                      recognizer: new TapGestureRecognizer()
+                                        ..onTap = () => method.launchURL(
+                                            "https://www.linkedin.com/company/thnity/?originalSubdomain=tn"),
+                                    ),
+                                  ],
+                                ),
+                              );
+                            })),
                         JobDetail(
                             "Developed components of the UI/UX for the mobile app.",
                             size),
