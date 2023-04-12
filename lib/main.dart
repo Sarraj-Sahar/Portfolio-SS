@@ -2,7 +2,12 @@ import 'package:flutter/material.dart';
 import 'desktop/desktopBody.dart';
 import 'mobile/mobileBody.dart';
 
-void main() => runApp(const MyApp());
+import 'package:url_strategy/url_strategy.dart';
+
+void main() {
+  setPathUrlStrategy();
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
