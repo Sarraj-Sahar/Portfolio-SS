@@ -38,13 +38,25 @@ class Projects extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   method.launchURL(
+                      "https://github.com/Sarraj-Sahar/Robot-Control-App");
+                },
+                child: ProjectCard(
+                    size,
+                    "Robot Control App",
+                    "Mobile app for full remote control of a security guard robot.",
+                    "Flutter Mapbox Websocket",
+                    "https://github.com/Sarraj-Sahar/Robot-Control-App"),
+              ),
+              GestureDetector(
+                onTap: () {
+                  method.launchURL(
                       "https://github.com/Sarraj-Sahar/Xypnos-Labs-Training");
                 },
                 child: ProjectCard(
                     size,
                     "Xypnos-Labs Training",
                     "Online learning platform mobile app, includes video courses.",
-                    "Flutter ",
+                    "Flutter Laravel",
                     "https://github.com/Sarraj-Sahar/Xypnos-Labs-Training"),
               ),
               GestureDetector(
@@ -70,18 +82,6 @@ class Projects extends StatelessWidget {
                     "Machine Learning Web Application that can predict whether a patient has diabetes based on various factors.",
                     "Python  SKLearn  Streamlit ",
                     "https://github.com/Sarraj-Sahar/Diabetes_Prediction_App"),
-              ),
-              GestureDetector(
-                onTap: () {
-                  method.launchURL(
-                      "https://github.com/Sarraj-Sahar/Talk-Talk-Chat-App-with-Java");
-                },
-                child: ProjectCard(
-                    size,
-                    "Talk-Talk Chat App",
-                    "WhatsApp clone built with java and real-time database for user authentication.",
-                    "Android  Java  Firebase",
-                    "https://github.com/Sarraj-Sahar/Talk-Talk-Chat-App-with-Java"),
               ),
             ],
           ),
