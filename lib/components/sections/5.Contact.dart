@@ -52,9 +52,11 @@ class ContactMe extends StatelessWidget {
             ),
             child: Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Text(
-                "Say Hi",
-                style: myTextStyle(16.0, myPurpleAccentColor),
+              child: SelectionContainer.disabled(
+                child: Text(
+                  "Say Hi",
+                  style: myTextStyle(16.0, myPurpleAccentColor),
+                ),
               ),
             ),
           );

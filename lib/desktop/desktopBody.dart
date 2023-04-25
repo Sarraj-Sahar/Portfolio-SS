@@ -247,7 +247,7 @@ class _DesktopBodyState extends State<DesktopBody> {
                         ),
                       ),
 
-                      MyEmail(size),
+                      SelectionContainer.disabled(child: MyEmail(size)),
                     ],
                   ),
                 ]),

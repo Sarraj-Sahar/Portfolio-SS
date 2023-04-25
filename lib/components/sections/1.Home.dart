@@ -96,11 +96,13 @@ class HomeHero extends StatelessWidget {
           ),
           child: Padding(
             padding: const EdgeInsets.all(10.0),
-            child: Text(
-              "Download my resume",
-              style: myTextStyle(
-                16.0,
-                myPurpleAccentColor,
+            child: SelectionContainer.disabled(
+              child: Text(
+                "Download my resume",
+                style: myTextStyle(
+                  16.0,
+                  myPurpleAccentColor,
+                ),
               ),
             ),
           ),
