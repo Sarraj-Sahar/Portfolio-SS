@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:port_s/components/sections/widgets/on_hover_card.dart';
 import 'package:port_s/methods/launchSocials.dart';
@@ -72,10 +74,19 @@ class HomeHero extends StatelessWidget {
         return TextButton(
           //download pdf file
           onPressed: () {
-            html.window
-                .open("assets/pdf_files/Sahar_Sarraj_Resume.pdf", "resume");
+            AnchorElement anchorElement =
+                AnchorElement(href: "assets/pdf_files/Sahar_Sarraj_Resume.pdf");
+            anchorElement.download = "Flutter Logo";
+            anchorElement.click();
           },
 
+          //try 1.
+          // onPressed: () {
+          //   html.window
+          //       .open("assets/pdf_files/Sahar_Sarraj_Resume.pdf", "resume");
+          // },
+
+          //og
           // onPressed: () {
           //   method.launchURL(
           //       "https://drive.google.com/file/d/1QwZvRQP_y5Pjv80eDKqv-l0ZC5YoBaau/view?usp=sharing");
