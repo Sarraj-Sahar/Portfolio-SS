@@ -3,8 +3,7 @@ import 'package:port_s/components/sections/widgets/on_hover_card.dart';
 import 'package:port_s/methods/launchSocials.dart';
 import 'package:port_s/utils/colors.dart';
 import 'package:port_s/utils/styles.dart';
-
-import '../navbar/my_logo.dart';
+import 'dart:html' as html;
 
 class HomeHero extends StatelessWidget {
   Size size;
@@ -64,7 +63,6 @@ class HomeHero extends StatelessWidget {
       ),
       Text(
         "Hi, I am a software engineer/student with a passion for developing mobile apps.\nI particularly enjoy designing interfaces that are both visually appealing and intuitive,\nelevating the user experience and highlighting an app's full potential.",
-        // That's why I am constantly working on enhancing my technical skills so I can bring creative visions to life.",
         style: myParagraphStyle(18.0),
       ),
       SizedBox(
@@ -72,10 +70,16 @@ class HomeHero extends StatelessWidget {
       ),
       OnHoverCard(0.0, -8.0, 1.0, builder: (isHovered) {
         return TextButton(
+          //download pdf file
           onPressed: () {
-            method.launchURL(
-                "https://drive.google.com/file/d/1QwZvRQP_y5Pjv80eDKqv-l0ZC5YoBaau/view?usp=sharing");
+            html.window
+                .open("assets/pdf_files/Sahar_Sarraj_Resume.pdf", "resume");
           },
+
+          // onPressed: () {
+          //   method.launchURL(
+          //       "https://drive.google.com/file/d/1QwZvRQP_y5Pjv80eDKqv-l0ZC5YoBaau/view?usp=sharing");
+          // },
           style: ButtonStyle(
             // foregroundColor: MaterialStateProperty.resolveWith<Color>(
             //     (Set<MaterialState> states) {
