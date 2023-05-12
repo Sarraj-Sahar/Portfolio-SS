@@ -73,12 +73,12 @@ class HomeHero extends StatelessWidget {
       OnHoverCard(0.0, -8.0, 1.0, builder: (isHovered) {
         return TextButton(
           //download pdf file
-          // onPressed: () {
-          //   AnchorElement anchorElement =
-          //       AnchorElement(href: "assets/pdf_files/Sahar_Sarraj_Resume.pdf");
-          //   anchorElement.download = "My Resume";
-          //   anchorElement.click();
-          // },
+          onPressed: () {
+            AnchorElement anchorElement =
+                AnchorElement(href: "assets/pdf_files/Sahar_Sarraj_Resume.pdf");
+            anchorElement.download = "Sahar_Sarraj_Resume";
+            anchorElement.click();
+          },
 
           //try 1.
           // onPressed: () {
@@ -87,10 +87,10 @@ class HomeHero extends StatelessWidget {
           // },
 
           //og
-          onPressed: () {
-            method.launchURL(
-                "https://drive.google.com/file/d/1QwZvRQP_y5Pjv80eDKqv-l0ZC5YoBaau/view?usp=sharing");
-          },
+          // onPressed: () {
+          //   method.launchURL(
+          //       "https://drive.google.com/file/d/1QwZvRQP_y5Pjv80eDKqv-l0ZC5YoBaau/view?usp=sharing");
+          // },
           style: ButtonStyle(
             // foregroundColor: MaterialStateProperty.resolveWith<Color>(
             //     (Set<MaterialState> states) {
