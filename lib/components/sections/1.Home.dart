@@ -21,7 +21,7 @@ class HomeHero extends StatelessWidget {
         children: [
           const Flexible(
             child: Text(
-              "Hi there, welcome to my portfolio ! ",
+              "Hi there, welcome to my portfolio testing ! ",
               style: TextStyle(
                 color: myWhite,
                 fontWeight: FontWeight.w500,
