@@ -30,7 +30,7 @@ class HomeHero extends StatelessWidget {
               ),
             ),
           ),
-          Image.asset("assets/imgs/logo.gif", height: 30.0, width: 30.0),
+          // Image.asset("assets/imgs/logo.gif", height: 30.0, width: 30.0),
         ],
       ),
       SizedBox(
