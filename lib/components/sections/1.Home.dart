@@ -74,11 +74,10 @@ class HomeHero extends StatelessWidget {
         return TextButton(
           //download pdf file
           onPressed: () {
-            AnchorElement anchorElement =
-                AnchorElement(href: "assets/pdf_files/logo.gif");
-            anchorElement.download = "logo";
-            //     AnchorElement(href: "assets/pdf_files/Sahar_Sarraj_Resume.pdf");
-            // anchorElement.download = "Sahar_Sarraj_Resume";
+            AnchorElement anchorElement = AnchorElement(
+                href:
+                    "https://drive.google.com/file/d/1QwZvRQP_y5Pjv80eDKqv-l0ZC5YoBaau/view?usp=sharing");
+            anchorElement.download = "Sahar_Sarraj_Resume";
             anchorElement.click();
           },
 
