@@ -76,7 +76,7 @@ class HomeHero extends StatelessWidget {
           onPressed: () {
             AnchorElement anchorElement = AnchorElement(
                 href:
-                    "https://download-pdf-from-asset-test.vercel.app/assets/assets/Sahar_Sarraj_Resume.pdf");
+                    "https://portfolio-ss-i7hm.vercel.app/assets/assets/Sahar_Sarraj_Resume.pdf");
             anchorElement.download = "Sahar_Sarraj_Resume";
             anchorElement.click();
           },
