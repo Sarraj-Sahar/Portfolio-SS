@@ -1,11 +1,9 @@
 import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:port_s/components/sections/widgets/on_hover_card.dart';
 import 'package:port_s/methods/launchSocials.dart';
 import 'package:port_s/utils/colors.dart';
 import 'package:port_s/utils/styles.dart';
-import 'dart:html' as html;
 
 class HomeHero extends StatelessWidget {
   Size size;
@@ -17,11 +15,11 @@ class HomeHero extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       SizedBox(height: size.height * 0.08),
-      Row(
+      const Row(
         children: [
-          const Flexible(
+          Flexible(
             child: Text(
-              "Hi there, welcome to my portfolio testing ! ",
+              "Hi there, welcome to my portfolio TESTING ! ",
               style: TextStyle(
                 color: myWhite,
                 fontWeight: FontWeight.w500,
@@ -81,23 +79,7 @@ class HomeHero extends StatelessWidget {
             anchorElement.click();
           },
 
-          //try 1.
-          // onPressed: () {
-          //   html.window
-          //       .open("assets/pdf_files/Sahar_Sarraj_Resume.pdf", "resume");
-          // },
-
-          //og
-          // onPressed: () {
-          //   method.launchURL(
-          //       "https://drive.google.com/file/d/1QwZvRQP_y5Pjv80eDKqv-l0ZC5YoBaau/view?usp=sharing");
-          // },
           style: ButtonStyle(
-            // foregroundColor: MaterialStateProperty.resolveWith<Color>(
-            //     (Set<MaterialState> states) {
-            //   if (states.contains(MaterialState.hovered)) return Colors.yellow;
-            //   return Colors.blue;
-            // }),
             side: MaterialStateProperty.all(
                 const BorderSide(width: 1, color: myPurpleAccentColor)),
             backgroundColor: MaterialStateProperty.resolveWith<Color?>(
