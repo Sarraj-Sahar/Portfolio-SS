@@ -1,11 +1,9 @@
 import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:port_s/components/sections/widgets/on_hover_card.dart';
 import 'package:port_s/methods/launchSocials.dart';
 import 'package:port_s/utils/colors.dart';
 import 'package:port_s/utils/styles.dart';
-import 'dart:html' as html;
 
 class HomeHero extends StatelessWidget {
   Size size;
@@ -30,7 +28,7 @@ class HomeHero extends StatelessWidget {
               ),
             ),
           ),
-          Image.asset("assets/imgs/logo.gif", height: 30.0, width: 30.0),
+          Image.asset("assets/logo.gif", height: 30.0, width: 30.0),
         ],
       ),
       SizedBox(
@@ -72,24 +70,12 @@ class HomeHero extends StatelessWidget {
       ),
       OnHoverCard(0.0, -8.0, 1.0, builder: (isHovered) {
         return TextButton(
-          //download pdf file
-          // onPressed: () {
-          //   AnchorElement anchorElement =
-          //       AnchorElement(href: "assets/pdf_files/Sahar_Sarraj_Resume.pdf");
-          //   anchorElement.download = "My Resume";
-          //   anchorElement.click();
-          // },
-
-          //try 1.
-          // onPressed: () {
-          //   html.window
-          //       .open("assets/pdf_files/Sahar_Sarraj_Resume.pdf", "resume");
-          // },
-
-          //og
           onPressed: () {
-            method.launchURL(
-                "https://drive.google.com/file/d/1QwZvRQP_y5Pjv80eDKqv-l0ZC5YoBaau/view?usp=sharing");
+            AnchorElement anchorElement = AnchorElement(
+                href:
+                    "https://sahar.vercel.app/assets/assets/Sahar_Sarraj_Resume.pdf");
+            anchorElement.download = "Sahar_Sarraj_Resume";
+            anchorElement.click();
           },
           style: ButtonStyle(
             // foregroundColor: MaterialStateProperty.resolveWith<Color>(
